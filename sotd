@@ -29,9 +29,6 @@ class Sherevo
   end
 end 
 
-while(true) do 
-  system('clear')
-  Sherevo.new 
-  sleep(3)
-end
+Sherevo.new 
+
 
