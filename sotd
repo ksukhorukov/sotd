@@ -3,14 +3,9 @@
 require 'colorize'
 require 'pry'
 
+SHEREVO_FILE = 'sotd.txt'
+
 class Sherevo
-  CURRENT_DIRECTORy=`pwd`
-  puts "#{CURRENT_DIRECTORy}"
-  SHEREVO_FILE = 'sotd.txt'
-  ABSOLUTE_PATH = ENV['SHEREVO_PROJECT'] +  '/' + SHEREVO_FILE
-
-  COLORS = [:red, :blue, :light_blue, :green, ]
-
   def initialize
     puts "abs: #{ABSOLUTE_PATH}"
     sherevo
