@@ -95,8 +95,20 @@ if [ -f "$HOME/.$OPENBSD_PROFILE_FILE" ]; then
 fi
 
 out '[+] Adding UNBROOT to autoload...'
-echo -e "$PROFILE_FILE"
+
+SHEREVO_PROJECT="$CURRENT_DIRECTORY/"
+SHEREVO_PROJECT_EXPORT="$SHEREVO_PROJECT
+
 NEW_PATH="PATH=\"\$PATH:$CURRENT_DIRECTORY/\""
+
+echo -e "$NEW_PATH"
+
+echo -e "
+export $SHEREVO_PROJECT_EXPORT" >>  $PROFILE_FILE
+
+echo -e "
+$SHEREVO_PROJECT" >> $PROFILE_FILE
+
 echo -e "$NEW_PATH" >> $PROFILE_FILE
 
 success '[+] Success!'

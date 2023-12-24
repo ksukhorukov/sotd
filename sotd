@@ -1,16 +1,18 @@
 #!/usr/bin/env ruby
 
 require 'colorize'
+require 'pry'
 
 class Sherevo
-  HOME = ENV['HOME']
-  PROJECT_DIRECTORY = "#{HOME}/workspace/sotd/"
+  CURRENT_DIRECTORy=`pwd`
+  puts "#{CURRENT_DIRECTORy}"
   SHEREVO_FILE = 'sotd.txt'
-  ABSOLUTE_PATH = PROJECT_DIRECTORY + SHEREVO_FILE
+  ABSOLUTE_PATH = ENV['SHEREVO_PROJECT'] +  '/' + SHEREVO_FILE
 
   COLORS = [:red, :blue, :light_blue, :green, ]
 
   def initialize
+    puts "abs: #{ABSOLUTE_PATH}"
     sherevo
   end 
 
@@ -21,7 +23,7 @@ class Sherevo
   end
 
   def sherevo_of_the_day
-    content.sample
+    "\n#{content.sample}"
   end
 
   def random_color
