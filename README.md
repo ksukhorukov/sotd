@@ -16,7 +16,7 @@ With all respect for all old people....
 ## INSTALL
 
 ```
-$ ./installer.sh
+$ ./installer
 ```
 
 ## USAGE
