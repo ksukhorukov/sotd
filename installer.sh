@@ -37,36 +37,36 @@ make_shell_profile() {
 
 RUBY_INTERPRETATOR_LOCATION=`which ruby`
 
-if [[ "$RUBY_INTERPRETATOR_LOCATION" =~ ^[A-z0-9\/]+$ ]]; then
-  out '[+] Perfect. You have some Ruby installed...'
-else 
-  error '[-] ERROR! Ruby interpretator is not installed'
-  exit
-fi
+# if [[ "$RUBY_INTERPRETATOR_LOCATION" =~ ^[A-z0-9\/]+$ ]]; then
+#   out '[+] Perfect. You have some Ruby installed...'
+# else 
+#   error '[-] ERROR! Ruby interpretator is not installed'
+#   exit
+# fi
 
-RUBY_VERSION=`ruby -v | awk '{print $2}'`
+# RUBY_VERSION=`ruby -v | awk '{print $2}'`
 
-MAJOR_VERSION_PART=`echo -e "$RUBY_VERSION" | cut -d. -f1`
+# MAJOR_VERSION_PART=`echo -e "$RUBY_VERSION" | cut -d. -f1`
 
-if [ $MAJOR_VERSION_PART -ge $MAJOR_VERSION_PART_REQUIRED ]; then 
-  out "[+] Script can be installed. Your Ruby version is $RUBY_VERSION"
-else 
-  error "[-] ERROR! Ruby version mismatch. Minimal Ruby version $MAJOR_VERSION_PART_REQUIRED"
-  exit
-fi 
+# if [ $MAJOR_VERSION_PART -ge $MAJOR_VERSION_PART_REQUIRED ]; then 
+#   out "[+] Script can be installed. Your Ruby version is $RUBY_VERSION"
+# else 
+#   error "[-] ERROR! Ruby version mismatch. Minimal Ruby version $MAJOR_VERSION_PART_REQUIRED"
+#   exit
+# fi 
 
-BUNDLER_LOCATION=`which bundler`
+# BUNDLER_LOCATION=`which bundler`
 
-if [ -z $BUNDLER_LOCATION ]; then
-  info '[~] Installing bundler...'
-  gem install bundler
-else 
-  out '[+] Bundler already installed'
-fi
+# if [ -z $BUNDLER_LOCATION ]; then
+#   info '[~] Installing bundler...'
+#   gem install bundler
+# else 
+#   out '[+] Bundler already installed'
+# fi
   
-out '[+] Installing gems...'
+# out '[+] Installing gems...'
 
-bundle install
+# bundle install
 
 CURRENT_DIRECTORY=`pwd`
 CURRENY_SHELL=`echo -e $SHELL`
@@ -95,11 +95,12 @@ if [ -f "$HOME/.$OPENBSD_PROFILE_FILE" ]; then
 fi
 
 out '[+] Adding UNBROOT to autoload...'
-
-echo -e "PATH=\"\$PATH:$CURRENT_DIRECTORY/ >> "$PROFILE_FILE"
+echo -e "$PROFILE_FILE"
+NEW_PATH="PATH=\"\$PATH:$CURRENT_DIRECTORY/\""
+echo -e "$NEW_PATH" >> $PROFILE_FILE
 
 success '[+] Success!'
 
 success "use 'sotd' command to enjoy so called 'sherevo'...."
 
-white "Autoload: Use the following command to reload rc file: \`source $PROFILE_FILE\` or reopen the terminal "
+white "Autoload: Use the following command to reload rc file: \`source $PROFILE_FILE\` or reopen the terminals"
