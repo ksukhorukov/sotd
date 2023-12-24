@@ -22,7 +22,6 @@ you can execute the binary directly:
 $ sotd
 
 PIZDEC SHEREVO!!1
-
 ```
 
 ## LICENCE
