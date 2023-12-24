@@ -2,6 +2,12 @@
 
 Sherevo Of The Day
 
+## DISCLAIMER
+
+This is [MOTD Service](https://www.reddit.com/r/NixOS/comments/5xd91g/message_of_the_day_motd_in_nixos/) analoge 
+
+With all respect for all old people....
+
 ## REQUIREMENTS
 
  - *nix or BSD based OS
