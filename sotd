@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'colorize'
+
 class Sherevo
   SHEREVO_FILE = 'sotd.txt'
 
@@ -14,7 +16,11 @@ class Sherevo
   end
 
   def sherevo_of_the_day
-    content.random
+    content.sample
+  end
+
+  def sherevo
+    puts sherevo_of_the_day.colorize(color: :green, mode: :bold)
   end
 end 
 
