@@ -4,9 +4,10 @@ require 'colorize'
 
 class Sherevo
   SHEREVO_FILE = 'sotd.txt'
+  COLORS = [:red, :blue, :light_blue, :green, ]
 
   def initialize
-    sherevo_of_the_day
+    sherevo
   end 
 
   private 
@@ -19,10 +20,18 @@ class Sherevo
     content.sample
   end
 
+  def random_color
+    String.colors.sample
+  end
+
   def sherevo
-    puts sherevo_of_the_day.colorize(color: :green, mode: :bold)
+    puts sherevo_of_the_day.colorize(color: random_color, mode: :bold)
   end
 end 
 
-10.times { Sherevo.new }
+while(true) do 
+  system('clear')
+  Sherevo.new 
+  sleep(3)
+end
 
