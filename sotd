@@ -3,7 +3,11 @@
 require 'colorize'
 
 class Sherevo
+  HOME = ENV['HOME']
+  PROJECT_DIRECTORY = "#{HOME}/workspace/sotd/"
   SHEREVO_FILE = 'sotd.txt'
+  ABSOLUTE_PATH = PROJECT_DIRECTORY + SHEREVO_FILE
+
   COLORS = [:red, :blue, :light_blue, :green, ]
 
   def initialize
@@ -13,7 +17,7 @@ class Sherevo
   private 
 
   def content
-    @content ||= File.readlines(SHEREVO_FILE).shuffle
+    @content ||= File.readlines(ABSOLUTE_PATH).shuffle
   end
 
   def sherevo_of_the_day
