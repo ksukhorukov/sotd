@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+class Sherevo
+  SHEREVO_FILE = 'sotd.txt'
+
+  def initialize
+    sherevo_of_the_day
+  end 
+
+  private 
+
+  def content
+    @content ||= File.readlines(SHEREVO_FILE).shuffle
+  end
+
+  def sherevo_of_the_day
+    content.random
+  end
+end 
+
+10.times { Sherevo.new }
+
