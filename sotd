@@ -1,24 +1,34 @@
 #!/usr/bin/env ruby
 
 require 'colorize'
-require 'pry'
 
 SHEREVO_FILE = 'sotd.txt'
 
 class Sherevo
   def initialize
-    puts "abs: #{ABSOLUTE_PATH}"
     sherevo
   end 
 
   private 
 
   def content
-    @content ||= File.readlines(ABSOLUTE_PATH).shuffle
+    @content ||= File.readlines(absolute_path).shuffle
+  end
+
+  def absolute_path
+    current_dir + '/' + sherevo_file
+  end
+
+  def current_dir
+    File.absolute_path('.')
+  end
+
+  def sherevo_file
+    ::SHEREVO_FILE
   end
 
   def sherevo_of_the_day
-    "\n#{content.sample}"
+    "\n#{content.sample}\n"
   end
 
   def random_color
