@@ -104,6 +104,6 @@ echo 'sotd' >> $PROFILE_FILE
 
 success '[+] Success!'
 
-success "use 'sotd' command to enjoy so called 'sherevo'...."
+success "\n\n\t\t\tuse 'sotd' command to enjoy so called «sherevo» a.k.a. «trésk»....\n"
 
-white "Autoload: Use the following command to reload rc file: \`source $PROFILE_FILE\` or reopen the terminals"
+white "Autoload: Use the following command to reload rc file: \`source $PROFILE_FILE\` or reopen the terminals\n"
