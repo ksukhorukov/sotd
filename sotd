@@ -3,6 +3,7 @@
 require 'colorize'
 
 SHEREVO_FILE = 'sotd.txt'
+PROJECT_FOLDER = '/workspace/sotd'
 
 class Sherevo
   def initialize
@@ -16,11 +17,11 @@ class Sherevo
   end
 
   def absolute_path
-    current_dir + '/' + sherevo_file
+    project_dir + '/' + sherevo_file
   end
 
-  def current_dir
-    File.absolute_path('.')
+  def project_dir
+    ENV['HOME'] + '/' + PROJECT_FOLDER 
   end
 
   def sherevo_file
