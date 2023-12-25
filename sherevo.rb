@@ -27,7 +27,7 @@ class Sherevo
   end
 
   def sherevo_of_the_day
-    "\n#{content.sample}\n"
+    "\n\>\> #{content.sample}\n"
   end
 
   def random_color
