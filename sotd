@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'colorize'
-
-require_relative 'config'
 require_relative 'sherevo'
 
-Sherevo.new 
+Sherevo.new
 
 
