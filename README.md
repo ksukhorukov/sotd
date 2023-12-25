@@ -8,6 +8,10 @@ This is [MOTD Service](https://www.reddit.com/r/NixOS/comments/5xd91g/message_of
 
 With all respect for all old people....
 
+## HOW IT LOOKS LIKE
+
+![screen](https://github.com/ksukhorukov/sotd/blob/master/images/example.png?raw=true)
+
 ## REQUIREMENTS
 
  - *nix or BSD based OS
