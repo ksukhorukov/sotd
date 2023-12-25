@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
+require_relative 'config'
 require 'colorize'
 
-SHEREVO_FILE = 'sotd.txt'
-PROJECT_FOLDER = '/workspace/sotd'
-
 class Sherevo
+  include Config
+
   def initialize
     sherevo
   end 
@@ -25,7 +25,7 @@ class Sherevo
   end
 
   def sherevo_file
-    ::SHEREVO_FILE
+    SHEREVO_FILE
   end
 
   def sherevo_of_the_day
