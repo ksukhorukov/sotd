@@ -1,30 +1,16 @@
 require 'colorize'
 require_relative 'config'
+require_relative 'phrases'
 
 class Sherevo
   include Config
+  include Phrases
 
   def initialize
     sherevo
   end 
 
   private 
-
-  def content
-    @content ||= File.readlines(absolute_path).shuffle
-  end
-
-  def absolute_path
-    project_dir + '/' + sherevo_file
-  end
-
-  def project_dir
-    ENV['HOME'] + '/' + PROJECT_FOLDER 
-  end
-
-  def sherevo_file
-    SHEREVO_FILE
-  end
 
   def sherevo_of_the_day
     "\n\>\> #{content.sample}\n"
