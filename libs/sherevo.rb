@@ -1,9 +1,7 @@
 require 'colorize'
-require_relative 'config'
 require_relative 'phrases'
 
 class Sherevo
-  include Config
   include Phrases
 
   def initialize
