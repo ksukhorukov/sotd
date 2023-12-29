@@ -52,11 +52,11 @@ make_shell_profile() {
 
 RUBY_INTERPRETATOR_LOCATION=`which ruby`
 
-if [[ "$RUBY_INTERPRETATOR_LOCATION" =~ ^[A-z0-9\/]+$ ]]; then
-  out '[+] Perfect. You have some Ruby installed...'
-else 
+if [ -z $RUBY_INTERPRETATOR_LOCATION ]; then
   error '[-] ERROR! Ruby interpretator is not installed'
   exit
+else 
+  out '[+] Perfect. You have some Ruby installed...'
 fi
 
 RUBY_VERSION=`ruby -v | awk '{print $2}'`
