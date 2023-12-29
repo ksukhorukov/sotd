@@ -16,12 +16,14 @@ With all respect for all old people....
 
  - Windows, *nix or BSD based OS
  - Ruby 3.x.x or higher
+   
 
 ## HOW TO INSTALL RUBY? [DALBICH FAQ GUIDE]
 
 * ### [Windows Installer](https://rubyinstaller.org)
 * ### [Ruby Source Code](https://www.ruby-lang.org/en/downloads/)
 * ### [Ruby Version Manager](https://rvm.io)
+
 
 ## INSTALL
 
