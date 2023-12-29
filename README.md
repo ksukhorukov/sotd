@@ -19,9 +19,9 @@ With all respect for all old people....
 
 ## HOW TO INSTALL RUBY? [DALBICH FAQ GUIDE]
 
-* [Windows Installer](https://rubyinstaller.org)
-* [Ruby Source Code](https://www.ruby-lang.org/en/downloads/)
-* [Ruby Version Manager](https://rvm.io)
+* ### [Windows Installer](https://rubyinstaller.org)
+* ### [Ruby Source Code](https://www.ruby-lang.org/en/downloads/)
+* ### [Ruby Version Manager](https://rvm.io)
 
 ## INSTALL
 
