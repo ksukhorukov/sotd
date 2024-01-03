@@ -16,6 +16,7 @@
 module Phrases
   def content  
     [
+     'Ну нихуя себе... пиздец!',
      'PIZDEC SHEREVO!!1',                                                                                                       
      'ну ты пиздец обмудок',                                                                                                    
      'урод ебаный',                                                                                                             
