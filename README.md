@@ -52,7 +52,7 @@ relogin yourself or type the following command:
 
 ## USAGE
 
-You can see so called «‎sherevo» every time whem you launch terminal, but
+You can see so called «‎sherevo» every time when you launch terminal, but
 you can execute the binary directly:
 ‎
 ```
@@ -66,3 +66,5 @@ PIZDEC SHEREVO!!1
 #### [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 ## [EOF]
+
+
