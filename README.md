@@ -31,7 +31,7 @@ With all respect for all old people....
 $ ./installer
 ```
 
-## HOW TO INTEGRATE SOTD SERVICE WITH MOTD SERVICE WITHOUT DIRECT INSTALLATION
+## INTEGRATION OF SOTD SERVICE WITH MOTD \*nix DAEMON
 
 1) Install SOTD and try to execute 'sotd' binary manually. If it works well then just delete this line from your RC file, e.g. '.bashrc':
 
