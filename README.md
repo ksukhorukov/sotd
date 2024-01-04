@@ -49,6 +49,17 @@ relogin yourself or type the following command:
 
 2) There is another repo that you have to clone: [https://github.com/ksukhorukov/motd.configs](https://github.com/ksukhorukov/motd.configs)
 
+Firstly go to the folder with MOTD configs and clone the repository:
+
+```
+cd /etc/update-motd.d
+git clone https://github.com/ksukhorukov/motd.configs.git
+```
+
+Then terminate current SSH session and relogin again or just exit from your current terminal session and open it again.
+
+You will see somethings like this:
+
 
 ## USAGE
 
