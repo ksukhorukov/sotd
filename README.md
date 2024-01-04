@@ -63,12 +63,47 @@ You will see somethings like this:
 ![sotd integration with motd](https://github.com/ksukhorukov/sotd/blob/master/images/motd_integration.png?raw=true)
 
 Actually it's working right now. But optionally you can remove 'sotd' from your shell profile file, e.g. .bashrc.
-It will prevents 'sotd' from autorun from login. For instance you have this line in your profile file that must be
-deleted:
+It will prevents 'sotd' from autorun from login. For instance you have this line in your profile:
 
 ```
 export PATH="$PATH:/Users/user/workspace/sotd/"
 ```
+
+Right after this line you will find the call of 'sotd'. And it must be deleted.
+
+Then you have to connect MOTD with SOTD.
+
+Firstly check if MOTD installed.
+
+```
+root@localhost:~# ls -la /etc/motd
+-rw-r--r-- 1 root root 286 Sep 29 20:00 /etc/motd
+```
+
+Then go to the configuration folder of MOTD, in our case it is /etc/update-motd.d and perform symbolik linking of the SOTD binary:
+
+```
+root@localhost:~# cd /etc/update-motd.d
+root@localhost:/etc/update-motd.d# which sotd
+/root/sotd/sotd
+root@localhost:/etc/update-motd.d# ln -s /root/sotd/sotd ./100-sotd
+root@localhost:/etc/update-motd.d# ls -la
+total 20
+drwxr-xr-x  2 root root 4096 Jan  4 03:45 .
+drwxr-xr-x 75 root root 4096 Jan  4 00:51 ..
+-rwxr-xr-x  1 root root  373 Jan  4 00:43 00-header
+-rwxr-xr-x  1 root root  239 Jan  4 00:43 10-body
+lrwxrwxrwx  1 root root   15 Jan  4 03:45 100-sotd -> /root/sotd/sotd
+-rwxr-xr-x  1 root root   84 Jan  4 03:07 90-fortune
+root@localhost:/etc/update-motd.d# ./100-sotd 
+
+>> пошел нахуй
+
+```
+
+Done! 
+
+Now try to relogin to SSH session or just reopen the terminal that you are using locally...
 
 
 
