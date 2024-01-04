@@ -46,7 +46,9 @@ relogin yourself or type the following command:
 `source ~/.bashrc`
 ```
 
+
 2) There is another repo that you have to clone: [https://github.com/ksukhorukov/motd.configs](https://github.com/ksukhorukov/motd.configs)
+
 
 ## USAGE
 
