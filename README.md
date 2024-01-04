@@ -60,12 +60,23 @@ Then terminate current SSH session and relogin again or just exit from your curr
 
 You will see somethings like this:
 
+![sotd integration with motd](https://github.com/ksukhorukov/sotd/blob/master/images/motd_integration.png?raw=true)
+
+Actually it's working right now. But optionally you can remove 'sotd' from your shell profile file, e.g. .bashrc.
+It will prevents 'sotd' from autorun from login. For instance you have this line in your profile file that must be
+deleted:
+
+```
+export PATH="$PATH:/Users/user/workspace/sotd/"
+```
+
+
 
 ## USAGE
 
-You can see so called «‎sherevo» every time when you launch terminal, but
+You can see so called «sherevo» every time when you launch terminal, but
 you can execute the binary directly:
-‎
+
 ```
 $ sotd
 
