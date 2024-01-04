@@ -31,6 +31,23 @@ With all respect for all old people....
 $ ./installer
 ```
 
+## HOW TO INTEGRATE SOTD SERVICE WITH MOTD SERVICE WITHOUT DIRECT INSTALLATION
+
+1) Install SOTD and try to execute 'sotd' binary manually. If it works well then just delete this line from your RC file, e.g. '.bashrc':
+
+```
+export PATH="$PATH:/home/users/sotd/"
+```
+
+It should look like something aforementioned but home directory of cause may be various. Just delete it and then 
+relogin yourself or type the following command:
+
+```
+`source ~/.bashrc`
+```
+
+2) There is another repo that you have to clone: [https://github.com/ksukhorukov/motd.configs](https://github.com/ksukhorukov/motd.configs)
+
 ## USAGE
 
 You can see so called «‎sherevo» every time whem you launch terminal, but
